@@ -1,0 +1,69 @@
+{
+  "name": "jsonpluck",
+  "version": "0.1.0",
+  "description": "Pluck valid JSON out of messy LLM output — strips markdown fences, fixes trailing commas, single quotes, comments, and truncation. Zero dependencies.",
+  "keywords": [
+    "json",
+    "llm",
+    "parse",
+    "repair",
+    "extract",
+    "openai",
+    "anthropic",
+    "gpt",
+    "structured-output",
+    "tolerant",
+    "json5",
+    "ai"
+  ],
+  "license": "MIT",
+  "author": "Tung Tran (https://github.com/trananhtung)",
+  "homepage": "https://github.com/trananhtung/jsonpluck#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trananhtung/jsonpluck.git"
+  },
+  "bugs": {
+    "url": "https://github.com/trananhtung/jsonpluck/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "jsonpluck": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.10",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}
