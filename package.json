@@ -1,6 +1,6 @@
 {
   "name": "jsonpluck",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pluck valid JSON out of messy LLM output — strips markdown fences, fixes trailing commas, single quotes, comments, and truncation. Zero dependencies.",
   "keywords": [
     "json",
